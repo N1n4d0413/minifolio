@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minifolio</title>
+</head>
+<style>
+    body{    
+        font-Family: Arial,Helvetica,sans-serif;
+        background: #ede9fe;
+        padding: 40px;
+        
+        }
+    #M{
+        font-weight: bold;
+        color: rgb(80, 242, 80);
+    }
+    #E{
+        font-weight: bold;
+        color:black;
+    }
+    #R{
+        font-weight: bold;
+        color: cyan;
+    }
+    #N{
+        font-weight: bold;
+        color: rgb(2, 144, 2);
+    }
+    #maindabba{
+        background-color: rgb(255, 255, 255);
+        max-width: 600px;
+        border: 2px;
+        border-radius: 14px;
+        padding: 12px;
+        margin: auto;
+        
+    }
+    
+    h1 , #about, #skills,#hiddencontent{
+            text-align: center;
+            margin: 15px;
+        }
+    #skill{
+        display: inline-block;
+        gap: 20px;
+        border-radius: 12px;
+        color: black;
+        background-color: #ede9fe;
+        padding: 10px;
+        border: 0;
+        margin:5px;
+    }
+
+    button{
+        border-radius: 14px;
+        font-weight: bold;
+        background-color: blueviolet;
+        color:white;
+        padding: 7.5px;
+        border: 0;
+    }
+    #actions{
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+    #hiddencontent{
+            background-color: aliceblue;
+            padding: 16px;
+            border-radius: 8px;
+            display: none;
+        
+    }
+    @media(max-width: 600px)
+        {
+            #actions
+            {
+                flex-direction: column;
+            }
+        } 
+
+</style>
+<body>
+    <div id="maindabba">
+        <h1>Ninad</h1>
+        <p id="about">I am learning <span id="M">M</span><span id="E">E</span><span id="R">R</span><span id="N">N</span> Stack development.</p>
+        <div id="skills">
+            <p id="skill">HTML</p>
+            <p id="skill">CSS</p>
+            <p id="skill">JavaScript</p>
+        </div>
+        <div id="actions">
+            <button onclick="aboutme()">About Me</button>
+            <button onclick="certs()">Certificates</button>
+            <button onclick="contactus()">Contact Us</button>
+            <button onclick="projects()">Projects</button>
+
+        </div>
+        <div id="hiddencontent"></div>
+        
+    </div>
+</body>
+<script>
+    let contentBox = document.getElementById("hiddencontent");
+
+    function aboutme(){
+        contentBox.style.display = "block";
+        contentBox.innerHTML = "I am Studying Computer Engineering";
+    }
+    function certs(){
+        contentBox.style.display = "block";
+        contentBox.innerHTML = "Java Programming";
+    }
+    function contactus(){
+        contentBox.style.display = "block";
+        contentBox.innerHTML = "9804XXXXXX";
+    }
+    function projects(){
+        contentBox.style.display = "block";
+        contentBox.innerHTML = "Virtual Banking System, Chat-Hive(Frontend logic-feed).";
+    }
+
+</script>
+</html>
